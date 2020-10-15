@@ -56,15 +56,22 @@ VALUES (2, 'PESSOA_B', '2000-12-10','M'),
 
 INSERT INTO TB_DML										-- Inserindo um registro na tabela sem especificar os campos.
 VALUES (5, 'PESSOA_E','M', '2000-07-10')				-- Lembrar da ordem das colunas no momento da criação da tabela.
-UPDATE TB_DML
-SET SEXO = 'F'											-- Atualizando o registro de um campo da tabela funcionário
-WHERE NOME = 'PESSOA_B'SELECT * FROM TB_DMLUPDATE TB_DML
-SET SEXO = 'M', DT_NASC = '1997-07-01'					-- Atualizando dois campos de um registro da tabela funcionário.
+UPDATE TB_DML											-- Atualizando o registro de um campo da tabela funcionário
+SET SEXO = 'F'											
+WHERE NOME = 'PESSOA_B'
+
+SELECT * FROM TB_DML									
+
+UPDATE TB_DML											-- Atualizando dois campos de um registro da tabela funcionário.
+SET SEXO = 'M', DT_NASC = '1997-07-01'					
 WHERE MATRICULA = '3'
+
 DELETE FROM TB_DML										-- Apagando o registro da tabela funcionário.
 WHERE MATRICULA = 3
 
+
 DELETE FROM TB_DML										-- Apagando o registro da tabela funcionário.
 WHERE NOME = 'PESSOA_B' AND DT_NASC = '2000-12-10'
+
 
 DELETE TB_DML											-- Apagando todos os registros da tabela funcionário.
